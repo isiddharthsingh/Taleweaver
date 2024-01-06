@@ -1,0 +1,90 @@
+@media only screen and (max-width: 1200px) {
+.storyItem {
+    padding: 10px 10px 5px;
+}
+.storyItemInr .storyImg {
+    height: 200px;
+}
+
+}
+@media only screen and (max-width: 992px) {
+.storyItem {
+    width: 33.3%;
+}
+.fullStoryInr .fullImg {
+    width: 180px;
+}
+.storySummary {
+    padding-left: 200px;
+}
+
+}
+@media only screen and (max-width: 767px) {
+.dashCntntInr {
+    padding: 30px;
+}
+.generateCntnt a.themeBtn,
+.generateCntnt input[type="file"] { 
+    margin-bottom: 20px;
+}
+
+}
+@media only screen and (max-width: 640px) {
+.dashCntntInr {
+    flex-direction: column;
+}
+.dashCntntInr div.dashLeftImg,
+.dashRightCntnt {
+  width: 100%;
+}
+.dashCntntInr div.dashRightCntnt {
+    padding: 20px 0 0 0px;
+    width: 100%;
+}
+.storyItem {
+    width: 50%;
+}
+.fullStoryInr .fullImg {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.storySummary {
+    padding-left: 0;
+}
+
+}
+@media only screen and (max-width: 480px) {
+.signupCntntInr, .myAccInr {
+    padding: 18px;
+    width: 94%;
+}
+.signupCntntInr h2 {
+    font-size: 18px;
+}
+input, select, textarea {
+    padding: 12px;
+}
+.signupCntnt, .dashCntntOuter, .myAccCntntOuter {
+    padding-top: 10px;
+}
+.fieldOuter.submitBtnOuter button {
+    padding: 12px;
+}
+.headerInr {
+    flex-direction: column;
+}
+.headerInr .logoOuter a {
+    justify-content: center;
+}
+.headerInr .headerRight {
+    margin: 15px auto auto;
+}
+
+}
+@media only screen and (max-width: 360px) {
+.storyItem {
+    width: 100%;
+}
+
+}

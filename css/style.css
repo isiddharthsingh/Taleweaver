@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+/*font-family: 'Inter', sans-serif;*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+img {
+    max-width: 100%;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select, textarea {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 14px;
+    width: 100%;
+}
+input:focus, select:focus, textarea:focus,
+input:hover, select:hover, textarea:hover {
+    outline: 0;
+    border: 1px solid #000;
+}
+html, body {
+    height: 100%;
+}
+.container {
+    max-width: 1080px;
+    margin: 40px auto auto;
+    width: 94%;
+}
+p, li {
+    font-size: 14px;
+    line-height: 22px;
+}
+#headerOuter {
+    background: #fff;
+}
+.talewearMainOuter {
+    background-image: url(../images/main-bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logoOuter a {
+    text-decoration: none;
+}
+.logoOuter h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 5px 0 40px;
+    text-align: center;
+    font-size: 18px;
+}
+.registerOuter a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: top;
+    background: #2863D6;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+}
+.registerOuter a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    background: #2863D6;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+}
+.registerOuter a.signupBtn {
+    background: #12B048;
+}
+.registerOuter a span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+.registerOuter a i {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    left: 0;
+}
+.registerOuter a:hover i {
+    left: 4px;
+}
+.headerInr {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.logoOuter {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+}
+.headerInr .logoOuter h1 {
+    margin: 0 0 0 10px;
+    color: #000;
+}
+.headerInr .logoOuter a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
+.headerInr .logoOuter img {
+    height: 45px;
+    width: auto;
+}
+.signupCntnt,
+.dashCntntOuter,
+.myAccCntntOuter {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+.dashCntntOuter {
+    padding-top: 0;
+}
+.signupCntntInr, .myAccInr {
+    background-color: #fdfdfd;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    padding: 48px;
+    display: inline-block;
+    vertical-align: top;
+    width: 98%;
+    text-align: left;
+    max-width: 500px;
+}
+.signupCntntInr h2 {
+    color: #282a35;
+    font-size: 29px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+.registerFormOuter form {
+    display: flex;
+    flex-direction: column;
+}
+.fieldOuter {
+    margin: 6px 0;
+}
+.tcCheckbox input, .tcCheckbox label {
+    cursor: pointer;
+}
+.tcCheckbox input {
+    width: auto;
+    position: relative;
+    top: 2px;
+}
+.tcCheckbox label {
+    font-size: 12px;
+}
+.tcCheckbox label a {
+    color: #000;
+    text-decoration: none;
+}
+.fieldOuter.submitBtnOuter {
+    margin-top: 25px;
+}
+.fieldOuter.submitBtnOuter button, .fieldOuter input.themeBtn {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #E8DA61;
+    font-size: 15px;
+}
+.fieldOuter.submitBtnOuter button:hover, .fieldOuter input.themeBtn:hover {
+    background: #c8bc52;
+    color: #171717;
+}
+.alredyAcc {
+    margin-top: 20px;
+    text-align: center;
+}
+.alredyAcc span, .alredyAcc a {
+    font-size: 12px;
+    margin-right: 7px;
+}
+.alredyAcc a {
+    color: #7d7d7d;
+    font-weight: bold;
+    text-decoration: none;
+}
+.alredyAcc a:hover {
+    color: #000;
+}
+.loginPage .alredyAcc a {
+    color: #12B048;
+}
+.forgotPwdFld a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    vertical-align: top;
+    opacity: 0.8;
+}
+.forgotPwdFld a:hover {
+    opacity: 1;
+    color: #000;
+    text-decoration: none;
+}
+.fieldOuter.verifyEmail {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 14px;
+    background: #fff;
+}
+.fieldOuter.verifyEmail input {
+    width: 87%;
+    border: none;
+    padding: 0;
+}
+.fieldOuter.verifyEmail span {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 12px;
+}
+.headerInr .headerRight {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+.signupPage .headerInr .headerRight,
+.forgotPwdPage .headerInr .headerRight,
+.loginPage .headerInr .headerRight,
+.resetPwdPage .headerInr .headerRight {
+    display: none;
+}
+.userProfile {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userProfile img {
+    height: 20px;
+}
+.userDropdown {
+    position: relative;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px;
+    z-index: 1;
+    right: 0px;
+    top: 40px;
+}
+.dropdown-content a {
+    color: #000;
+    text-decoration: none;
+}
+.userDropdown:hover .dropdown-content {
+  display: block;
+}
+.headerRightMenu {
+    margin-right: 5px;
+}
+.headerInr .headerRight .headerRightMenu a {
+    height: 40px;
+    width: 40px;
+    background: #f1f1f1;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 2px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 38px;
+}
+.headerInr .headerRight a img {
+    height: 22px;
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.dashCntntInr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    padding: 48px;
+    box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.2);
+    margin-top: 40px;
+}
+.dashCntntInr div.dashLeftImg {
+    width: 40%;
+}
+.dashCntntInr div.dashRightCntnt {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 0 0 20px;
+    width: 60%;
+}
+.generateCntnt form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.generateCntnt input[type="file"] {
+    width: 270px;
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 0;
+}
+.generateCntnt .themeBtn, .generateCntnt input[type="submit"] {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    background: #2863D6;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 0;
+    border: none;
+    width: auto;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.uploadStoryOuter {
+    width: 100%;
+}
+.generateCntnt {
+    padding: 60px 0 0;
+}
+.uploadedDataBlk span.emptyMsg {
+    font-weight: 500;
+    color: #474747;
+    line-height: 20px;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+.uploadedCntntInr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.uploadedCntntInr span {
+    font-size: 14px;
+    line-height: 22px;
+}
+.uploadedDataBlk {
+    width: 100%;
+    position: relative;
+}
+.uploadedCntntInr .uploadedImg {
+    margin-right: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.uploadedCntntInr .uploadedImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.uploadedData,
+.sumarisedData {
+    width: 100%;
+    text-align: left;
+}
+.uploadedData p {
+    font-size: 14px;
+    line-height: 22px;
+}
+.storyGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.storyItem {
+    width: 25%;
+    padding: 20px 20px 10px;
+}
+.dashboardOuter.storyPage,
+.dashboardOuter.fullStoryPage {
+    background: #eeeeee;
+}
+.dashboardOuter.fullStoryPage {
+    min-height: 100%;
+}
+.storyItemInr {
+    background: #fff;
+    position: relative;
+    padding: 5px;
+}
+.storyItemInr:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+.storyItemInr:hover:after,
+.storyItemInr:hover .storyInfo {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+.storyItemInr .storyImg {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.storyItemInr .storyImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.storyInfo {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+}
+.storyInfo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullStoryInr {
+    position: relative;
+}
+.fullStoryInr .fullImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+.fullImg img {
+    height: 100%;
+    width: 200%;
+    object-fit: cover;
+    object-position: top center;
+}
+.storySummary {
+    padding-left: 275px;
+}
+.storySummary p,
+.fullSummaryCntnt p {
+    color: #292929;
+    line-height: 25px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.storyCntnt {
+    padding-bottom: 40px;
+}
+.storySummary h2,
+.fullSummaryCntntInr h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.dateNdTime {
+    margin: 0 0 20px;
+}
+.dateNdTime samp {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-style: italic;
+    color: #5b5b5b;
+}
+.dateNdTime span:first-child {
+    margin-right: 20px;
+}
+.dateNdTime span img {
+    height: 15px;
+    width: auto;
+    margin-top: -2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.loaderOuter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    z-index: 99999;
+    display: none;
+}
+.loaderInr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.loaderInr img {
+    height: 80px;
+    width: auto;
+}
+.errorMsg {
+    text-align: center;
+    padding: 0 24px;
+}
+.errorMsg span {
+    display: inline-block;
+    vertical-align: top;
+    background: #00e143;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border: 1px solid #0dc143;
+}
+.errorMsg.red span {
+    background: red;
+    border: 1px solid red;
+}
+.fullStoryCntnt {
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+    width: 100%;
+}
+.fullSummaryCntnt {
+    margin-bottom: 40px;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+.sumarisedDataOuter {
+    margin-top: 30px;
+    display: none;
+}
+.sumarisedDataOuter h2,
+.uploadedCntntInr h2 {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+.generateCntnt form span {
+    margin-right: 8px;
+}
