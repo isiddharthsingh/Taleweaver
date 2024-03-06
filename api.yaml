@@ -1,0 +1,87 @@
+openapi: "3.0.1"
+info:
+  title: ImageStoryAPI
+  version: "1.0"
+
+components:
+  securitySchemes:
+    CognitoAuthorizer:
+      type: apiKey
+      name: Authorization
+      in: header
+      x-amazon-apigateway-authtype: cognito_user_pools
+      x-amazon-apigateway-authorizer:
+        type: cognito_user_pools
+        providerARNs:
+          - arn:aws:cognito-idp:us-east-1:068392994093:userpool/us-east-1_LWLqtPQ7c
+
+paths:
+  /process-image:
+    post:
+      summary: Process uploaded image
+      security:
+        - CognitoAuthorizer: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Image processed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Error processing image
+      x-amazon-apigateway-integration:
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:068392994093:function:index_photos/invocations
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+
+  /fetch-story:
+    get:
+      summary: Fetch story from DynamoDB
+      security:
+        - CognitoAuthorizer: []
+      parameters:
+        - in: query
+          name: userId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Story fetched successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  story:
+                    type: string
+        '404':
+          description: Story not found
+        '500':
+          description: Error fetching story
+      x-amazon-apigateway-integration:
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:068392994093:function:fetch-story/invocations
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: when_no_match
+        httpMethod: GET
+        type: aws_proxy
